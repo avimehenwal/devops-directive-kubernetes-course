@@ -21,7 +21,7 @@ While the whole point of this course is that you probably won't want/need to run
 
 The Taskfile contains the commands to start each application:
 
-### Postgres
+### 1. Postgres
 
 It's way more convenient to run postgres in a container, so we will do that.
 
@@ -29,25 +29,25 @@ It's way more convenient to run postgres in a container, so we will do that.
 
 **🚨 NOTE:** After starting the database, you need to run the migration file in `./postgresql/migrations` to create the table that the APIs use. This can be done with `postgresql:run-psql-init-script`.
 
-### api-node
+### 2. api-node
 
 To run the node api you will need to `task api-node:install` to install the dependencies.
 
 After installing the dependencies, `task api-node:run` will run the api in development mode with nodemon for restarting the app when you make source code changes.
 
-### api-golang
+### 3. api-golang
 
 To run the golang api you will need to run `task api-golang:install`.
 
 After installing the dependencies, `task api-golang:run` will build and run the api.
 
-### client-react
+### 4. client-react
 
 Like api-node, you will first need to install the dependencies with `task client-react:install`.
 
 After installing the dependencies, `task client-react:run` will use vite to run the react app in development mode.
 
-### load-generator-python
+### 5. load-generator-python
 
 This service uses poetry to manage dependencies. You will need to install the dependencies with `task load-generator-python:install`.
 

@@ -90,7 +90,7 @@ tasks:
 
   14-get-manifests:
     cmds:
-      - helm get manifest postgresql
+      - helm get manifest postgresql | bat -l yaml
     desc: Get manifests for PostgreSQL release
 
   15-uninstall:

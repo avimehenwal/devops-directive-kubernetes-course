@@ -49,6 +49,54 @@
         }
       }
     },
+    "bat@latest": {
+      "last_modified": "2025-05-12T14:38:58Z",
+      "resolved": "github:NixOS/nixpkgs/eaeed9530c76ce5f1d2d8232e08bec5e26f18ec1#bat",
+      "source": "devbox-search",
+      "version": "0.25.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/1bbx87wsd4zyg667yz9n7chpfi9pv463-bat-0.25.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/1bbx87wsd4zyg667yz9n7chpfi9pv463-bat-0.25.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/naqcdc2ydjfrvkvbd4yr9b0ci9ddblr1-bat-0.25.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/naqcdc2ydjfrvkvbd4yr9b0ci9ddblr1-bat-0.25.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/2y9smyag0bf4ap80hc47x53kqq16lq9f-bat-0.25.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/2y9smyag0bf4ap80hc47x53kqq16lq9f-bat-0.25.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/7m2i1qi7mm3fdrw38kp8yv2vbvcwjk0g-bat-0.25.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/7m2i1qi7mm3fdrw38kp8yv2vbvcwjk0g-bat-0.25.0"
+        }
+      }
+    },
     "civo@latest": {
       "last_modified": "2025-05-12T14:38:58Z",
       "resolved": "github:NixOS/nixpkgs/eaeed9530c76ce5f1d2d8232e08bec5e26f18ec1#civo",

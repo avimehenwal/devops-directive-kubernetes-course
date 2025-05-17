@@ -26,7 +26,8 @@
     "python312@latest",
     "tilt@latest",
     "yq-go@latest",
-    "hey@latest"
+    "hey@latest",
+    "bat@latest"
   ],
   "shell": {
     "init_hook": [
