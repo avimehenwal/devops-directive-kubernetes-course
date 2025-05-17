@@ -1,6 +1,51 @@
 version: "3"
 
 includes:
-  setup:
-    taskfile: ./03-installation-and-setup/Taskfile.yaml
+  01_setup:
     dir: ./03-installation-and-setup
+    taskfile: ./03-installation-and-setup/Taskfile.yaml
+  02_namespace:
+    dir: ./04-built-in-resource-types/Namespace
+    taskfile: ./04-built-in-resource-types/Namespace/Taskfile.yaml
+  03_pod:
+    dir: ./04-built-in-resource-types/Pod
+    taskfile: ./04-built-in-resource-types/Pod/Taskfile.yaml
+  04_service:
+    dir: ./04-built-in-resource-types/Service
+    taskfile: ./04-built-in-resource-types/Service/Taskfile.yaml
+  05_deployment:
+    dir: ./04-built-in-resource-types/Deployment
+    taskfile: ./04-built-in-resource-types/Deployment/Taskfile.yaml
+  06_replica_set:
+    dir: ./04-built-in-resource-types/ReplicaSet
+    taskfile: ./04-built-in-resource-types/ReplicaSet/Taskfile.yaml
+  07_job:
+    dir: ./04-built-in-resource-types/Job
+    taskfile: ./04-built-in-resource-types/Job/Taskfile.yaml
+  08_cron_job:
+    dir: ./04-built-in-resource-types/CronJob
+    taskfile: ./04-built-in-resource-types/CronJob/Taskfile.yaml
+  09_config_map:
+    dir: ./04-built-in-resource-types/ConfigMap
+    taskfile: ./04-built-in-resource-types/ConfigMap/Taskfile.yaml
+  10_secret:
+    dir: ./04-built-in-resource-types/Secret
+    taskfile: ./04-built-in-resource-types/Secret/Taskfile.yaml
+  11_demon_set:
+    dir: ./04-built-in-resource-types/DaemonSet
+    taskfile: ./04-built-in-resource-types/DaemonSet/Taskfile.yaml
+  12_ingress:
+    dir: ./04-built-in-resource-types/Ingress
+    taskfile: ./04-built-in-resource-types/Ingress/Taskfile.yaml
+  13_gateway_api:
+    dir: ./04-built-in-resource-types/GatewayAPI
+    taskfile: ./04-built-in-resource-types/GatewayAPI/Taskfile.yaml
+  14_persistent_volume:
+    dir: ./04-built-in-resource-types/PersistentVolume
+    taskfile: ./04-built-in-resource-types/PersistentVolume/Taskfile.yaml
+  15_stateful_set:
+    dir: ./04-built-in-resource-types/StatefulSet
+    taskfile: ./04-built-in-resource-types/StatefulSet/Taskfile.yaml
+  16_rbac:
+    dir: ./04-built-in-resource-types/RBAC
+    taskfile: ./04-built-in-resource-types/RBAC/Taskfile.yaml

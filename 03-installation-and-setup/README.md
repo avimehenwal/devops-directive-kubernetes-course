@@ -94,3 +94,10 @@ gcp:09-clean-up
 ```
 
 🚨 NOTE: If you have deployed additional resources (such as load balancers) that reference the VPC/Subnets/Etc... you may need to manually clean up those resources in order for this command to succeed. You should also verify that you have cleaned up all resources to avoid unwanted costs!
+
+## Devbox Service
+
+```sh
+devbox services up postgresql
+devbox services stop postgresql
+```
