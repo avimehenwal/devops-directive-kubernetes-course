@@ -101,3 +101,10 @@ gcp:09-clean-up
 devbox services up postgresql
 devbox services stop postgresql
 ```
+
+## Generate Load for LB service
+
+```sh
+LB_IP=$(kubectl get svc/foo-service -o=jsonpath='{.status.loadBalancer.ingress[0].ip}')
+hey -n 10000 -c 10 http://${LB_IP}:5678/
+```

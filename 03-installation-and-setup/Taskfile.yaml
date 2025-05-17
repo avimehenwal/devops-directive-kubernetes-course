@@ -169,7 +169,7 @@ tasks:
 
   kind:01-generate-config:
     cmds:
-      - REPLACE_WITH_ABSOLUTE_PATH=${PWD} envsubst < kind-config.yaml.TEMPLATE > kind-config.yaml
+      - REPLACE_WITH_ABSOLUTE_PATH=${PWD} CLUSTER_NAME=${CLUSTER_NAME} envsubst < kind-config.yaml.TEMPLATE > kind-config.yaml
     desc: "Generate kind config with local absolute paths for PV mounts"
 
   kind:02-create-cluster:
@@ -182,7 +182,19 @@ tasks:
     cmds:
       - sudo cloud-provider-kind
 
-  kind:04-delete-cluster:
+  kind:04-run-pods-with-lb-service:
+    desc: "Run 2 pods accessability via load-balancer service at port 5678"
     cmds:
-      - kind delete cluster
+      - kubectl apply -f https://kind.sigs.k8s.io/examples/loadbalancer/usage.yaml
+
+  kind:05-generate-some-traffic-on-lb:
+    desc: "Simulate some external traffic on load-balancer"
+    cmds:
+      - LB_IP=$(kubectl get svc/foo-service -o=jsonpath='{.status.loadBalancer.ingress[0].ip}')
+      - for i in {1..1000}; do curl -s http://${LB_IP}:5678/ && echo; done
+      - hey -n 10000 -c 10 http://${LB_IP}:5678/
+
+  kind:06-delete-cluster:
+    cmds:
+      - kind delete clusters ${CLUSTER_NAME}
     desc: Delete and existing a kind Kubernetes cluster
