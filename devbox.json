@@ -36,6 +36,8 @@
       "go install sigs.k8s.io/cloud-provider-kind@v0.2.0"
     ],
     "scripts": {
+      "start": "./scripts/start.sh",
+      "stop": "./scripts/stop.sh",
       "test": ["echo \"Error: no test specified\" && exit 1"]
     }
   }

@@ -108,3 +108,9 @@ devbox services stop postgresql
 LB_IP=$(kubectl get svc/foo-service -o=jsonpath='{.status.loadBalancer.ingress[0].ip}')
 hey -n 10000 -c 10 http://${LB_IP}:5678/
 ```
+
+## Devbox Tasks
+
+```sh
+sudo -v && devbox run start
+```
