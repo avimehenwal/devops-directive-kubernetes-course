@@ -45,3 +45,10 @@ kubectl delete all --all --all-namespaces --dry-run=client
 kubectl delete all --all --all-namespaces
 kubectl delete crds --all
 ```
+
+## Platform - K8S cluster
+
+1. [x] Metric collection & Visualization - prometheus + grafana
+2. [x] Log collection & Aggregation - fluentbit + Loki
+3. [ ] Monitor Application Logs & create useful log analysis queries/pipelines
+

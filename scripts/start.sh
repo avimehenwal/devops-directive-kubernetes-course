@@ -26,6 +26,7 @@ kubectl create namespace $NAMESPACE || echo "Namespace $NAMESPACE already exists
 kubectl config set-context --current --namespace=$NAMESPACE
 
 # 4. Install kube-prometheus-stack using Helm
+helm upgrade --install loki grafana/loki-stack --namespace ${NAMESPACE} --create-namespace -f ./15-platform-infra-resource/log_monitoring/values-loki-stack.yaml
 helm install my-kube-prometheus-stack prometheus-community/kube-prometheus-stack --version 72.5.1 --namespace ${NAMESPACE} --create-namespace
 
 # 5. Wait for Prometheus pods to be ready
