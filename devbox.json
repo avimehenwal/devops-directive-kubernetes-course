@@ -37,6 +37,7 @@
     ],
     "scripts": {
       "start": "./scripts/start.sh",
+      "start:lb": "sudo cloud-provider-kind",
       "stop": "./scripts/stop.sh",
       "test": ["echo \"Error: no test specified\" && exit 1"]
     }

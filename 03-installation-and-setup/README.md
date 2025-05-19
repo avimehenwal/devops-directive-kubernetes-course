@@ -114,3 +114,12 @@ hey -n 10000 -c 10 http://${LB_IP}:5678/
 ```sh
 sudo -v && devbox run start
 ```
+
+## Kind cluster
+
+Simulate cluster nodes with [specific kubernetes versions](https://kind.sigs.k8s.io/docs/user/known-issues)
+
+```sh
+kind create cluster --image kindest/node:v1.21.14
+````
+
